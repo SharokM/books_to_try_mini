@@ -9,8 +9,11 @@ const NewBookInput = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.addBook(book);
-        setBook("");
+        if (book !== "") {
+            props.addBook(book);
+        } else {
+            setBook("");
+        }
     }
 
 
